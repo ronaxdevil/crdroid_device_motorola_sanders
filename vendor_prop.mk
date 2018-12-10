@@ -367,6 +367,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     vendor.video.disable.ubwc=1
 
+#IDKY
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.model=sanders
+
+# Spectrum
+PRODUCT_PROPERTY_OVERRIDES += \
+    spectrum.support=1 \
+    persist.spectrum.kernel=MAYHEM
+
 # Create Swap disk, if below sys-prop enabled & also if device has lower (< 1 GB) RAM
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.config.swap=true
