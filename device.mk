@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
-    libaacwrapper \
     libaudio-resampler \
     libtinycompress
 
@@ -200,9 +199,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-# Wi-Fi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # IDC
 PRODUCT_COPY_FILES += \
