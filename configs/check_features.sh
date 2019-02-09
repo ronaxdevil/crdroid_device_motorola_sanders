@@ -13,3 +13,14 @@ else
     # Only XT1806 variant got a compass
     rm /vendor/etc/permissions/android.hardware.sensor.compass.xml
 fi
+
+if [ "$sku" = "XT1802" ]; then
+    # Only XT1802 got DTV
+    echo "insmod /vendor/lib/modules/isdbt.ko" >> /vendor/bin/init.mmi.boot.sh
+else
+    # If not... Remove DTV APKs and libs
+    rm -r /system/priv-app/DTVPlayer
+    rm -r /system/priv-app/DTVService
+    rm /vendor/lib*/libdtv*.so
+fi
+
