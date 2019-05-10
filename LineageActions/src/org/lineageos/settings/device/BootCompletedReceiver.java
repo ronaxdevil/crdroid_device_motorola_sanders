@@ -33,6 +33,7 @@ import org.lineageos.settings.device.util.FileUtils;
 import org.lineageos.settings.device.actions.Constants;
 import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
 import org.lineageos.settings.device.dirac.DiracUtils;
+import org.lineageos.settings.device.DisplayCalibration;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     static final String TAG = "LineageActions";
@@ -58,6 +59,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         context.startService(new Intent(context, ServiceWrapper.class));
         new DiracUtils(context).onBootCompleted();
+            DisplayCalibration.restore(context);
    }
 
     protected static void enableNavBar(boolean enable, Context context) {
