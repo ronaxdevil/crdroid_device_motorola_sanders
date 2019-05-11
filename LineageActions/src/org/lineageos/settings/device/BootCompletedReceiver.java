@@ -32,7 +32,7 @@ import lineageos.providers.LineageSettings;
 import org.lineageos.settings.device.util.FileUtils;
 import org.lineageos.settings.device.actions.Constants;
 import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
-import org.lineageos.settings.device.dirac.DiracUtils;
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.device.DisplayCalibration;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
