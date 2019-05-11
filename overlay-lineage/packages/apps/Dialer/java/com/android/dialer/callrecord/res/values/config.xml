@@ -18,5 +18,5 @@
       <bool name="config_enableManualSubProvisioning">true</bool>
 
     <bool name="call_recording_enabled">true</bool>
-       	<integer name="call_recording_audio_source">2</integer>
+       	<integer name="call_recording_audio_source">4</integer>
 </resources>
