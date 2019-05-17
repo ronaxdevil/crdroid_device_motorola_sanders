@@ -73,36 +73,10 @@ enum wlan_sleep_states {
     WLAN_STATES_COUNT
 };
 
-enum wlan_power_params {
-    CUMULATIVE_SLEEP_TIME_MS = 0,
-    CUMULATIVE_TOTAL_ON_TIME_MS,
-    DEEP_SLEEP_ENTER_COUNTER,
-    LAST_DEEP_SLEEP_ENTER_TSTAMP_MS,
-
-    //Don't add any lines after this line
-    WLAN_POWER_PARAMS_COUNT
-};
-#endif
-
-#define PLATFORM_SLEEP_MODES_COUNT RPM_MODE_MAX
-
-#define MAX_RPM_PARAMS 2
-#define XO_VOTERS (MAX_PLATFORM_STATS - XO_VOTERS_START)
-#define VMIN_VOTERS 0
-
-struct stat_pair {
-    enum stats_type stat;
-    const char *label;
-    const char **parameters;
-    size_t num_parameters;
-};
-
-int sysfs_write(char *path, char *s);
+void power_init(void);
+void power_hint(power_hint_t hint, void *data);
+void set_interactive(int on);
 void set_feature(feature_t feature, int state);
-int extract_platform_stats(uint64_t *list);
-#ifndef NO_WLAN_STATS
-int extract_wlan_stats(uint64_t *list);
-#endif
 
 #ifdef __cplusplus
 }
