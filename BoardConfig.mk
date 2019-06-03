@@ -240,6 +240,7 @@ TARGET_USES_OLD_MNC_FORMAT := true
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
